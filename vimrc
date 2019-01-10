@@ -1,6 +1,7 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+" Always install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -24,9 +25,8 @@ augroup load_us_ycm
                      \| autocmd! load_us_ycm
 augroup END
 
-set rtp+=/usr/share/powerline/bindings/vim
-
 " Enable powerline for vim
+set rtp+=/usr/share/powerline/bindings/vim
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
@@ -38,14 +38,15 @@ set autoindent    " turns on autoindent
 set smartindent   " does the right thing (mostly) in programs
 set laststatus=2  " always show status line - important for powerline
 
-set listchars=eol:¬,tab:>»,trail:·,extends:>,precedes:<,space:· " list of inivisibles
+set listchars=eol:¬,tab:>»,trail:␣,extends:>,precedes:<,space:· " list of inivisibles
 set list " sets above invisibles
 
+" Snakefile syntax
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
 
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
+autocmd vimenter * NERDTree " open NERDTree when Vim startup
+autocmd StdinReadPre * let s:std_in=1 " open NERDTree with empty Vim
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " close with if only NERDTree remains
 
