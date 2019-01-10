@@ -11,7 +11,8 @@ Run this command inside ~/.vim directory:
 ```bash
     (rm -rf plugged || true) && \
     mkdir git-tmp && \
-    git clone --no-checkout grzadr/grzadr_vim ./git-tmp && \
+    git clone --no-checkout https://github.com/grzadr/grzadr_vim.git ./git-tmp && \
+    mv ./git-tmp/.git ./
     rm -rf git-tmp && \
     git reset --hard HEAD
 ```
