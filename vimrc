@@ -11,6 +11,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'davidhalter/jedi'
 call plug#end()
 
 augroup load_us_ycm
