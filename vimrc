@@ -6,6 +6,11 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 augroup load_us_ycm
