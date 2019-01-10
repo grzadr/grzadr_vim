@@ -8,14 +8,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-Plug 'davidhalter/jedi'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' } " Completing phrases
+Plug 'terryma/vim-multiple-cursors' " enables editing in multiple places
+Plug 'tpope/vim-eunuch' " some bash commands exposed to vim
+Plug 'tpope/vim-surround' " surround words with brackets
+Plug 'scrooloose/nerdtree' " tree view of directories
+Plug 'Xuyuanp/nerdtree-git-plugin' " tree view of directories
+Plug 'airblade/vim-gitgutter' " show extra panel with git differences from HEAD
+Plug 'davidhalter/jedi' " completions for Python
 call plug#end()
 
 augroup load_us_ycm
@@ -26,6 +26,7 @@ augroup END
 
 set rtp+=/usr/share/powerline/bindings/vim
 
+" Enable powerline for vim
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
