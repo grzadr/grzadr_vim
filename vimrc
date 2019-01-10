@@ -38,7 +38,7 @@ set smartindent   " does the right thing (mostly) in programs
 set laststatus=2  " always show status line - important for powerline
 
 set listchars=eol:¬,tab:>»,trail:·,extends:>,precedes:<,space:· " list of inivisibles
-set line " sets above invisibles
+set list " sets above invisibles
 
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
