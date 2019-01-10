@@ -31,7 +31,7 @@ set expandtab     " don't use actual tab character (ctrl-v)
 set shiftwidth=2  " indenting is 4 spaces
 set autoindent    " turns on autoindent
 set smartindent   " does the right thing (mostly) in programs
-set laststatus=2  " always show status line
+set laststatus=2  " always show status line - important for powerline
 
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
