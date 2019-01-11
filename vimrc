@@ -19,11 +19,11 @@ Plug 'airblade/vim-gitgutter' " show extra panel with git differences from HEAD
 Plug 'davidhalter/jedi' " completions for Python
 call plug#end()
 
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter c call plug#load('ultisnips', 'YouCompleteMe')
-                     \| autocmd! load_us_ycm
-augroup END
+"augroup load_us_ycm
+"  autocmd!
+"  autocmd InsertEnter c call plug#load('ultisnips', 'YouCompleteMe')
+"                     \| autocmd! load_us_ycm
+"augroup END
 
 " Enable powerline for vim
 set rtp+=/usr/share/powerline/bindings/vim
