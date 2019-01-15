@@ -32,6 +32,7 @@ source $VIMRUNTIME/syntax/python.vim
 " ni         = NEWLINE INDENT
 " ruleparams = [ni input] [ni output] [ni params] [ni message] [ni threads] [ni (run | shell)] NEWLINE snakemake
 " input      = "input" ":" parameter_list
+" priority   = "priority" ":" parameter_list
 " output     = "output" ":" parameter_list
 " params     = "params" ":" parameter_list
 " message    = "message" ":" stringliteral
@@ -44,7 +45,7 @@ source $VIMRUNTIME/syntax/python.vim
 syn keyword pythonStatement	include workdir onsuccess onerror
 syn keyword pythonStatement	ruleorder localrules configfile
 syn keyword pythonStatement	touch protected temp wrapper
-syn keyword pythonStatement	input output params message threads resources
+syn keyword pythonStatement	input output params message threads resources priority
 syn keyword pythonStatement	version run shell benchmark snakefile log script
 syn keyword pythonStatement	rule subworkflow nextgroup=pythonFunction skipwhite
 
