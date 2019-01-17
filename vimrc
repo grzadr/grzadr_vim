@@ -17,6 +17,7 @@ Plug 'scrooloose/nerdtree' " tree view of directories
 Plug 'Xuyuanp/nerdtree-git-plugin' " tree view of directories
 Plug 'airblade/vim-gitgutter' " show extra panel with git differences from HEAD
 Plug 'davidhalter/jedi' " completions for Python
+Plug 'itchyny/lightline.vim' " powerline plugin
 call plug#end()
 
 "augroup load_us_ycm
@@ -26,10 +27,14 @@ call plug#end()
 "augroup END
 
 " Enable powerline for vim
-set rtp+=/usr/share/powerline/bindings/vim
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"set rtp+=/usr/share/powerline/bindings/vim
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+
+if !has('gui_running')
+  set t_Co=256
+endif
 
 set number        " enumerate lines
 set expandtab     " don't use actual tab character (ctrl-v)
