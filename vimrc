@@ -33,13 +33,19 @@ python3 del powerline_setup
 
 set number        " enumerate lines
 set expandtab     " don't use actual tab character (ctrl-v)
-set shiftwidth=2  " indenting is 4 spaces
+set shiftwidth=2  " indenting is 2 spaces
 set autoindent    " turns on autoindent
 set smartindent   " does the right thing (mostly) in programs
 set laststatus=2  " always show status line - important for powerline
 
 set listchars=eol:¬,tab:>»,trail:␣,extends:>,precedes:<,space:· " list of inivisibles
 set list " sets above invisibles
+
+" toggle invisibles on/off
+nmap <leader>l :set list!<CR>
+
+" toggle line numbers on/off
+nmap <leader>n :set invnumber<CR>
 
 " Snakefile syntax
 au BufNewFile,BufRead Snakefile set syntax=snakemake
