@@ -16,21 +16,9 @@ Plug 'tpope/vim-surround' " surround words with brackets
 Plug 'scrooloose/nerdtree' " tree view of directories
 Plug 'Xuyuanp/nerdtree-git-plugin' " tree view of directories
 Plug 'airblade/vim-gitgutter' " show extra panel with git differences from HEAD
-Plug 'davidhalter/jedi' " completions for Python
-Plug 'itchyny/lightline.vim' " powerline plugin
+Plug 'itchyny/lightline.vim' " powerline like plugin
+Plug 'Vimjas/vim-python-pep8-indent' " indentation for python scripts
 call plug#end()
-
-"augroup load_us_ycm
-"  autocmd!
-"  autocmd InsertEnter c call plug#load('ultisnips', 'YouCompleteMe')
-"                     \| autocmd! load_us_ycm
-"augroup END
-
-" Enable powerline for vim
-"set rtp+=/usr/share/powerline/bindings/vim
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
 
 if !has('gui_running')
   set t_Co=256
@@ -45,6 +33,8 @@ set laststatus=2  " always show status line - important for powerline
 
 set listchars=eol:¬,tab:>»,trail:␣,extends:>,precedes:<,space:· " list of inivisibles
 set list " sets above invisibles
+
+filetype indent on
 
 " toggle invisibles on/off
 nmap <leader>l :set list!<CR>
