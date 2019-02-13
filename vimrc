@@ -20,6 +20,8 @@ Plug 'itchyny/lightline.vim' " powerline like plugin
 Plug 'Vimjas/vim-python-pep8-indent' " indentation for python scripts
 call plug#end()
 
+colorscheme neon-PK
+
 if !has('gui_running')
   set t_Co=256
 endif
