@@ -55,4 +55,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 set backspace=indent,eol,start
 
-autocmd BufWritePre *.pl,*.py,*.cpp,*.hpp,*.sh %s/\s\+$//e
+autocmd BufWritePre *.pl,*.py,*.cpp,*.hpp,*.sh,*.sql %s/\s\+$//e
