@@ -45,7 +45,7 @@ nmap <leader>l :set list!<CR>
 nmap <leader>n :set invnumber<CR>
 
 " Snakefile syntax
-au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead Snakefile* set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
 
 autocmd vimenter * NERDTree " open NERDTree when Vim startup
@@ -55,4 +55,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 set backspace=indent,eol,start
 
-autocmd BufWritePre *.pl,*.py,*.cpp,*.hpp,*.sh,*.sql %s/\s\+$//e
+autocmd BufWritePre *.pl,*.py,*.cpp,*.hpp,*.sh,*.sql,Snakefile* %s/\s\+$//e
