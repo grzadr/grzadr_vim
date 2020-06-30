@@ -9,7 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' } " Completing phrases
+" Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' } " Completing phrases
 Plug 'terryma/vim-multiple-cursors' " enables editing in multiple places
 Plug 'tpope/vim-eunuch' " some bash commands exposed to vim
 Plug 'tpope/vim-surround' " surround words with brackets
